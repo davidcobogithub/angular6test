@@ -1,0 +1,102 @@
+<div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-11 contenido">
+
+  <div class="card">
+    <div class="card-header  encabezado-seccion">
+      <i class="fas fa-user"></i> Clientes
+    </div>
+
+    <form id="clienteForm" autocomplete="off">
+
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-11 col-sm-11" style="margin-left: auto;margin-right: auto;">
+            <fieldset class="col-sm-12 scheduler-border">
+              <legend class="scheduler-border">Informacion del cliente:</legend>
+              <br />
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                  <div class="form-inline">
+                    <table>
+                      <tr>
+                        <td class="inputSize" style="text-align:left">
+                          <span class="col-form-label my-1 mr-2">*Cedula:</span>
+                        </td>
+                        <td>
+                          <input type="text" #cedula id="cedula" name="cedula"
+                            class="form-control" maxlength="20" style="min-width:100%;max-width:100%"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                  <div class="form-inline">
+                    <table>
+                      <tr>
+                        <td class="inputSize" style="text-align:left">
+                          <span class="col-form-label my-1 mr-2">*Nombre:</span>
+                        </td>
+                        <td>
+                          <input type="text" #nombre id="nombre" name="nombre" class="form-control"
+                            style="min-width:100%;max-width:100%"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                  <div class="form-inline">
+                    <table>
+                      <tr>
+                        <td class="inputSize" style="text-align:left">
+                          <span class="col-form-label my-1 mr-2">*Apellido:</span>
+                        </td>
+                        <td>
+                          <input type="text" #apellido id="apellido" name="apellido" class="form-control" 
+                            style="min-width:100%;max-width:100%"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                  <div class="form-inline">
+                    <table>
+                      <tr>
+                        <td class="inputSize" style="text-align:left">
+                          <span class="col-form-label my-1 mr-2">*Fecha de nacimiento:</span>
+                        </td>
+                        <td>
+                          <input type="text" class="form-control my-1 mr-2" #fechaNacimiento
+                                 id="fechaNacimiento" name="fechaNacimiento" style="min-width:95%;max-width:95%"/>
+                          <small id="fechaInicialHelp" class="form-text text-muted">
+                              Formato (yyyy-mm-dd)
+                          </small>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>  
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div id="mensaje" class="col-md-12 text-center" style="font-weight: bold;">
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center footer-seccion">
+
+          <button (click)="cedula.value=''; nombre.value=''; apellido.value=''; fechaNacimiento.value=''" type="button" class="btn btn-outline-secondary boton">Limpiar Formulario</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="create(cedula.value, nombre.value, apellido.value, fechaNacimiento.value);" type="button" class="btn btn-outline-secondary boton">Registrar Cliente</button>
+
+    </div>
+
+    </form>
+
+  </div>
+</div>

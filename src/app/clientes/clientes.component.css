@@ -1,0 +1,37 @@
+.encabezado-seccion{
+    /* text-align: center; */
+    background-color: #7D3C98;
+    color: white;
+}
+
+.encabezado-seccion:hover{
+    color:white;
+}
+
+.contenido{
+    padding-top: 15px;
+    /*padding-right: 120px;
+    margin-left: 100px;*/
+}
+
+.boton{
+    background-color: #10498F; color:white
+}
+
+.boton:focus{
+    background-color: #1A237E;
+}
+
+.encabezado{
+    border-bottom: 10px solid #ee8600;
+    color: white;
+    background-color: #006b33
+}
+
+.oculto{
+    display:none;
+}
+
+.inputSize{
+    width: 100px;
+}
